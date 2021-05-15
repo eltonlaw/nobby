@@ -3,4 +3,7 @@
 *CTestTestfile.cmake
 *cmake_install.cmake
 *Makefile
+nobby/libnobby.a
 Testing/
+test/run_test_*
+

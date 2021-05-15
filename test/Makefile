@@ -127,25 +127,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/test_gcode_parser.dir/rule:
-	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/test_gcode_parser.dir/rule
-.PHONY : test/CMakeFiles/test_gcode_parser.dir/rule
+test/CMakeFiles/run_test_gcode_parser.dir/rule:
+	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/run_test_gcode_parser.dir/rule
+.PHONY : test/CMakeFiles/run_test_gcode_parser.dir/rule
 
 # Convenience name for target.
-test_gcode_parser: test/CMakeFiles/test_gcode_parser.dir/rule
-.PHONY : test_gcode_parser
+run_test_gcode_parser: test/CMakeFiles/run_test_gcode_parser.dir/rule
+.PHONY : run_test_gcode_parser
 
 # fast build rule for target.
-test_gcode_parser/fast:
-	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_gcode_parser.dir/build.make test/CMakeFiles/test_gcode_parser.dir/build
-.PHONY : test_gcode_parser/fast
+run_test_gcode_parser/fast:
+	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_test_gcode_parser.dir/build.make test/CMakeFiles/run_test_gcode_parser.dir/build
+.PHONY : run_test_gcode_parser/fast
 
 test_gcode_parser.o: test_gcode_parser.cpp.o
 .PHONY : test_gcode_parser.o
 
 # target to build an object file
 test_gcode_parser.cpp.o:
-	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_gcode_parser.dir/build.make test/CMakeFiles/test_gcode_parser.dir/test_gcode_parser.cpp.o
+	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_test_gcode_parser.dir/build.make test/CMakeFiles/run_test_gcode_parser.dir/test_gcode_parser.cpp.o
 .PHONY : test_gcode_parser.cpp.o
 
 test_gcode_parser.i: test_gcode_parser.cpp.i
@@ -153,7 +153,7 @@ test_gcode_parser.i: test_gcode_parser.cpp.i
 
 # target to preprocess a source file
 test_gcode_parser.cpp.i:
-	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_gcode_parser.dir/build.make test/CMakeFiles/test_gcode_parser.dir/test_gcode_parser.cpp.i
+	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_test_gcode_parser.dir/build.make test/CMakeFiles/run_test_gcode_parser.dir/test_gcode_parser.cpp.i
 .PHONY : test_gcode_parser.cpp.i
 
 test_gcode_parser.s: test_gcode_parser.cpp.s
@@ -161,7 +161,7 @@ test_gcode_parser.s: test_gcode_parser.cpp.s
 
 # target to generate assembly for a file
 test_gcode_parser.cpp.s:
-	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/test_gcode_parser.dir/build.make test/CMakeFiles/test_gcode_parser.dir/test_gcode_parser.cpp.s
+	cd /home/d0nkrs/dev/nobby && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/run_test_gcode_parser.dir/build.make test/CMakeFiles/run_test_gcode_parser.dir/test_gcode_parser.cpp.s
 .PHONY : test_gcode_parser.cpp.s
 
 # Help Target
@@ -173,7 +173,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... test_gcode_parser"
+	@echo "... run_test_gcode_parser"
 	@echo "... test_gcode_parser.o"
 	@echo "... test_gcode_parser.i"
 	@echo "... test_gcode_parser.s"

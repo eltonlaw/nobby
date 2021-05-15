@@ -2,4 +2,4 @@
 
 ## Testing
 
-    cmake . && make && make test
+    cmake . && make && CTEST_OUTPUT_ON_FAILURE=1 make test
