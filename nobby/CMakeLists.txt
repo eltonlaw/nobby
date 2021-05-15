@@ -12,4 +12,11 @@ set(LIBS
 
 add_library(${PROJECT} ${SOURCES} ${HEADERS})
 
-target_link_libraries(${PROJECT} ${LIBS})
+add_executable(nobbyd main.cpp)
+
+target_include_directories(nobbyd PUBLIC
+    ${CONFIG_INCLUDE}
+    )
+target_link_libraries(nobbyd
+    ${PROJECT}
+    )
