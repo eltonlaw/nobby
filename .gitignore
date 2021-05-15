@@ -1,6 +1,2 @@
-*CMakeCache.txt
-*CMakeFiles/
-*CTestTestfile.cmake
-*cmake_install.cmake
-*Makefile
-Testing/
+nobby/firmware.bin
+nobby/firmware.elf
