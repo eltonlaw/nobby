@@ -4,29 +4,26 @@
 
 BOOST_AUTO_TEST_CASE(whitespace)
 {
-  gcode::Parser parser;
   std::string line(" G0");
-  gcode::GCodeLine gline = parser.parse(line);
+  gcode::GCodeLine gline = gcode::parse_line(line);
   BOOST_TEST(gline.command.letter == 'G');
   BOOST_TEST(gline.command.number == 0.);
 }
 
 BOOST_AUTO_TEST_CASE(numbers)
 {
-  gcode::Parser parser;
   std::string line("G3");
-  gcode::GCodeLine gline = parser.parse(line);
+  gcode::GCodeLine gline = gcode::parse_line(line);
   BOOST_TEST(gline.command.number == 3.);
   line = "G32";
-  gline = parser.parse(line);
+  gline = gcode::parse_line(line);
   BOOST_TEST(gline.command.number == 32.);
 }
 
-BOOST_AUTO_TEST_CASE(multiple args)
+BOOST_AUTO_TEST_CASE(multiple_args)
 {
-  gcode::Parser parser;
   std::string line("G0 X11 Y13 Z14");
-  gcode::GCodeLine gline = parser.parse(line);
+  gcode::GCodeLine gline = gcode::parse_line(line);
   BOOST_TEST(gline.command.letter == 'G');
   BOOST_TEST(gline.command.number == 0.);
   BOOST_TEST(gline.args[0].letter == 'X');

@@ -17,12 +17,6 @@ struct GCodeLine {
 
 GCodeLN read_next_ln(std::stringstream& ss);
 
-// Parses raw gcode string into GCodeLine object to be used later
-class Parser {
-public:
-    GCodeLine parse(std::string);
-private:
-
-};
+GCodeLine parse_line(std::string);
 
 } // namespace gcode

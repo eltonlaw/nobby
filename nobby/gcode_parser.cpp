@@ -26,7 +26,7 @@ GCodeLN read_next_ln(std::stringstream& ss) {
     return ret;
 }
 
-GCodeLine Parser::parse(std::string line) {
+GCodeLine parse_line(std::string line) {
 
     std::stringstream ss;
     // FIXME: make sure that line is capitalized
