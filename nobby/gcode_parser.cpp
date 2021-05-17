@@ -1,5 +1,4 @@
 #include <iostream>
-#include <fstream>
 #include <sstream>
 #include <vector>
 
@@ -28,13 +27,20 @@ GCodeLN read_next_ln(std::stringstream& ss) {
 }
 
 GCodeLine Parser::parse(std::string line) {
+
     std::stringstream ss;
     // FIXME: make sure that line is capitalized
+    // FIXME: make sure that there's no whitespace at the end
     ss << line;
     std::vector<GCodeLN> lns;
 
-    GCodeLN ln = read_next_ln(ss);
-    lns.push_back(ln);
+    GCodeLN ln;
+    while (true) {
+        ln = gcode::read_next_ln(ss);
+        lns.push_back(ln);
+        if (ss.rdbuf()->in_avail() == 0)
+            break;
+    }
 
     GCodeLine gline {
          .command = lns[0],
